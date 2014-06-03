@@ -22,6 +22,7 @@
 		9787FF6C193CC6B500E1AE6D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9787FF50193CC6B400E1AE6D /* CoreData.framework */; };
 		9787FF74193CC6B500E1AE6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9787FF72193CC6B500E1AE6D /* InfoPlist.strings */; };
 		9787FF76193CC6B500E1AE6D /* ProjectSDMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9787FF75193CC6B500E1AE6D /* ProjectSDMTests.m */; };
+		DC2989F9193E156800553FDB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC2989F7193E156800553FDB /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9787FF71193CC6B500E1AE6D /* ProjectSDMTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProjectSDMTests-Info.plist"; sourceTree = "<group>"; };
 		9787FF73193CC6B500E1AE6D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9787FF75193CC6B500E1AE6D /* ProjectSDMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectSDMTests.m; sourceTree = "<group>"; };
+		DC2989F8193E156800553FDB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				9787FF5B193CC6B400E1AE6D /* sdmAppDelegate.h */,
 				9787FF5C193CC6B400E1AE6D /* sdmAppDelegate.m */,
+				DC2989F7193E156800553FDB /* Model.xcdatamodeld */,
 				9787FF61193CC6B400E1AE6D /* Images.xcassets */,
 				9787FF5E193CC6B400E1AE6D /* ProjectSDM.xcdatamodeld */,
 				9787FF53193CC6B400E1AE6D /* Supporting Files */,
@@ -252,6 +255,7 @@
 				9787FF59193CC6B400E1AE6D /* main.m in Sources */,
 				9787FF5D193CC6B400E1AE6D /* sdmAppDelegate.m in Sources */,
 				9787FF60193CC6B400E1AE6D /* ProjectSDM.xcdatamodeld in Sources */,
+				DC2989F9193E156800553FDB /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +454,7 @@
 				9787FF7B193CC6B500E1AE6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9787FF7C193CC6B500E1AE6D /* Build configuration list for PBXNativeTarget "ProjectSDMTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +463,7 @@
 				9787FF7E193CC6B500E1AE6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -469,6 +475,16 @@
 			);
 			currentVersion = 9787FF5F193CC6B400E1AE6D /* ProjectSDM.xcdatamodel */;
 			path = ProjectSDM.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		DC2989F7193E156800553FDB /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DC2989F8193E156800553FDB /* Model.xcdatamodel */,
+			);
+			currentVersion = DC2989F8193E156800553FDB /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
