@@ -3,8 +3,12 @@
     <entity name="Diagnosis" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="symptoms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Symptoms" inverseName="diagnosis" inverseEntity="Symptoms" syncable="YES"/>
     </entity>
-    <entity name="Investigations" syncable="YES"/>
+    <entity name="Investigations" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Medications" syncable="YES">
         <attribute name="brandName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
@@ -20,24 +24,24 @@
         <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mobileNumber" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="visit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Visit" inverseName="patient" inverseEntity="Visit" syncable="YES"/>
+        <relationship name="visits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Visit" inverseName="patient" inverseEntity="Visit" syncable="YES"/>
     </entity>
     <entity name="Symptoms" syncable="YES">
-        <attribute name="attributes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="diagnosis" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Diagnosis" inverseName="symptoms" inverseEntity="Diagnosis" syncable="YES"/>
     </entity>
     <entity name="Visit" syncable="YES">
         <attribute name="billAmount" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="patient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="visit" inverseEntity="Patient" syncable="YES"/>
+        <relationship name="patient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="visits" inverseEntity="Patient" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Patient" positionX="-110" positionY="-118" width="128" height="178"/>
-        <element name="Visit" positionX="187" positionY="-115" width="128" height="88"/>
-        <element name="Symptoms" positionX="-128" positionY="-333" width="128" height="88"/>
-        <element name="Diagnosis" positionX="45" positionY="-333" width="128" height="75"/>
+        <element name="Diagnosis" positionX="45" positionY="-333" width="128" height="88"/>
+        <element name="Investigations" positionX="396" positionY="-322" width="128" height="73"/>
         <element name="Medications" positionX="225" positionY="-333" width="128" height="105"/>
-        <element name="Investigations" positionX="396" positionY="-322" width="128" height="43"/>
+        <element name="Patient" positionX="-110" positionY="-127" width="128" height="178"/>
+        <element name="Symptoms" positionX="-144" positionY="-358" width="128" height="88"/>
+        <element name="Visit" positionX="187" positionY="-106" width="128" height="88"/>
     </elements>
 </model>
