@@ -8,6 +8,7 @@
 //  
 
 #import "sdmAppDelegate.h"
+#import "RegistrationViewController.h"
 
 @implementation sdmAppDelegate
 
@@ -19,8 +20,16 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    RegistrationViewController *rvc = [[RegistrationViewController alloc] init];
+    [self.window addSubview:rvc.view];
+    self.window.rootViewController = rvc;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+
+    
     return YES;
 }
 
