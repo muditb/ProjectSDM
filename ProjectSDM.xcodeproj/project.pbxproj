@@ -14,6 +14,7 @@
 		9739120719418C2400874D31 /* sdmSuggestionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9739120619418C2400874D31 /* sdmSuggestionsTableViewController.m */; };
 		9739120B1941A81A00874D31 /* sdmPassCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 973912091941A81A00874D31 /* sdmPassCodeViewController.m */; };
 		9739120C1941A81A00874D31 /* sdmPassCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9739120A1941A81A00874D31 /* sdmPassCodeViewController.xib */; };
+		9739120F194259AA00874D31 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9739120E194259AA00874D31 /* UIImage+ImageEffects.m */; };
 		9787FF4B193CC6B400E1AE6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9787FF4A193CC6B400E1AE6D /* Foundation.framework */; };
 		9787FF4D193CC6B400E1AE6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9787FF4C193CC6B400E1AE6D /* CoreGraphics.framework */; };
 		9787FF4F193CC6B400E1AE6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9787FF4E193CC6B400E1AE6D /* UIKit.framework */; };
@@ -54,6 +55,8 @@
 		973912081941A81A00874D31 /* sdmPassCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdmPassCodeViewController.h; sourceTree = "<group>"; };
 		973912091941A81A00874D31 /* sdmPassCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sdmPassCodeViewController.m; sourceTree = "<group>"; };
 		9739120A1941A81A00874D31 /* sdmPassCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sdmPassCodeViewController.xib; sourceTree = "<group>"; };
+		9739120D194259AA00874D31 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		9739120E194259AA00874D31 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		9787FF47193CC6B400E1AE6D /* ProjectSDM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectSDM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9787FF4A193CC6B400E1AE6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9787FF4C193CC6B400E1AE6D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -137,6 +140,8 @@
 			children = (
 				9711C4EB194022C000069B69 /* RegistrationViewController.h */,
 				9711C4EC194022C000069B69 /* RegistrationViewController.m */,
+				9739120D194259AA00874D31 /* UIImage+ImageEffects.h */,
+				9739120E194259AA00874D31 /* UIImage+ImageEffects.m */,
 				9739120519418C2400874D31 /* sdmSuggestionsTableViewController.h */,
 				9739120619418C2400874D31 /* sdmSuggestionsTableViewController.m */,
 				973912081941A81A00874D31 /* sdmPassCodeViewController.h */,
@@ -289,6 +294,7 @@
 				9711C4F41940280400069B69 /* sdmFormViewController.m in Sources */,
 				9739120B1941A81A00874D31 /* sdmPassCodeViewController.m in Sources */,
 				9787FF5D193CC6B400E1AE6D /* sdmAppDelegate.m in Sources */,
+				9739120F194259AA00874D31 /* UIImage+ImageEffects.m in Sources */,
 				9711C4EE194022C000069B69 /* RegistrationViewController.m in Sources */,
 				9787FF60193CC6B400E1AE6D /* ProjectSDM.xcdatamodeld in Sources */,
 				DC2989F9193E156800553FDB /* Model.xcdatamodeld in Sources */,
