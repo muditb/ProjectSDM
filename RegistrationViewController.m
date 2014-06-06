@@ -40,15 +40,17 @@
     [self.view addSubview:splitVC.view];
     [splitVC.view sizeToFit];
     
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(authenticate) name:UIApplicationDidBecomeActiveNotification object:nil];
+    
     // Do any additional setup after loading the view from its nib.
 }
 -(void)viewDidAppear:(BOOL)animated
 {
-    BOOL authenticationRequired = [[NSUserDefaults standardUserDefaults] boolForKey:@"authenticationRequired"];
-    if (authenticationRequired)
-    {
-        [self authenticate];
-    }
+//    BOOL authenticationRequired = [[NSUserDefaults standardUserDefaults] boolForKey:@"authenticationRequired"];
+//    if (authenticationRequired)
+//    {
+//        [self authenticate];
+//    }
 }
 -(void)didAuthenticate
 {
