@@ -22,13 +22,41 @@
     }
     return self;
 }
+-(void)authenticate
+{
+    sdmPassVC = [[sdmPassCodeViewController alloc] init];
+    sdmPassVC.delegate = self;
+    [self presentViewController:sdmPassVC animated:YES completion:nil];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    sdmFormViewController *formVC = [[sdmFormViewController alloc] init];
+    sdmSuggestionsTableViewController *suggestionsVC = [[sdmSuggestionsTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    
+    splitVC.viewControllers = [NSArray arrayWithObjects:suggestionsVC,formVC, nil];
+    
+    [self.view addSubview:splitVC.view];
+    [splitVC.view sizeToFit];
+    
     // Do any additional setup after loading the view from its nib.
 }
-
+-(void)viewDidAppear:(BOOL)animated
+{
+    BOOL authenticationRequired = [[NSUserDefaults standardUserDefaults] boolForKey:@"authenticationRequired"];
+    if (authenticationRequired)
+    {
+        [self authenticate];
+    }
+}
+-(void)didAuthenticate
+{
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"authenticationRequired"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [sdmPassVC dismissViewControllerAnimated:YES completion:nil];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

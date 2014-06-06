@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RegistrationViewController.h"
 
 @interface sdmAppDelegate : UIResponder <UIApplicationDelegate>
+{
+    RegistrationViewController *rvc;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

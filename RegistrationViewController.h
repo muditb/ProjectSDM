@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "sdmFormViewController.h"
+#import "sdmSuggestionsTableViewController.h"
+#import "sdmPassCodeViewController.h"
 
-@interface RegistrationViewController : UIViewController
-
+@interface RegistrationViewController : UIViewController <sdmPassCodeViewControllerDelegate>
+{
+    IBOutlet UISplitViewController *splitVC;
+    sdmPassCodeViewController *sdmPassVC;
+}
+-(void)authenticate;
 @end

@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationViewController">
             <connections>
+                <outlet property="splitVC" destination="RjE-0C-InG" id="4cB-iN-HYj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,18 +14,45 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Testing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIP-mU-jE8">
-                    <rect key="frame" x="462" y="206" width="55" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
         </view>
+        <splitViewController id="RjE-0C-InG">
+            <toolbarItems/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <nil key="simulatedDestinationMetrics"/>
+            <navigationController key="masterViewController" id="ehb-z4-hzw">
+                <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                <nil key="simulatedTopBarMetrics"/>
+                <nil key="simulatedBottomBarMetrics"/>
+                <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                <nil key="simulatedDestinationMetrics"/>
+                <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="2KT-0c-L9m">
+                    <autoresizingMask key="autoresizingMask"/>
+                </navigationBar>
+                <viewControllers>
+                    <tableViewController clearsSelectionOnViewWillAppear="NO" id="HCl-9C-7tD">
+                        <navigationItem key="navigationItem" title="Root View Controller" id="LNm-ia-3pU"/>
+                        <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                        <nil key="simulatedTopBarMetrics"/>
+                        <nil key="simulatedBottomBarMetrics"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                        <nil key="simulatedDestinationMetrics"/>
+                    </tableViewController>
+                </viewControllers>
+            </navigationController>
+            <viewController key="detailViewController" id="U3L-Bi-DTY">
+                <toolbarItems/>
+                <nil key="simulatedStatusBarMetrics"/>
+                <nil key="simulatedTopBarMetrics"/>
+                <nil key="simulatedBottomBarMetrics"/>
+                <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                <nil key="simulatedDestinationMetrics"/>
+            </viewController>
+        </splitViewController>
     </objects>
 </document>

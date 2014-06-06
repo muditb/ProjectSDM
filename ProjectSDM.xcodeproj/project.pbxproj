@@ -11,6 +11,9 @@
 		9711C4EF194022C000069B69 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9711C4ED194022C000069B69 /* RegistrationViewController.xib */; };
 		9711C4F41940280400069B69 /* sdmFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9711C4F21940280400069B69 /* sdmFormViewController.m */; };
 		9711C4F51940280400069B69 /* sdmFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9711C4F31940280400069B69 /* sdmFormViewController.xib */; };
+		9739120719418C2400874D31 /* sdmSuggestionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9739120619418C2400874D31 /* sdmSuggestionsTableViewController.m */; };
+		9739120B1941A81A00874D31 /* sdmPassCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 973912091941A81A00874D31 /* sdmPassCodeViewController.m */; };
+		9739120C1941A81A00874D31 /* sdmPassCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9739120A1941A81A00874D31 /* sdmPassCodeViewController.xib */; };
 		9787FF4B193CC6B400E1AE6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9787FF4A193CC6B400E1AE6D /* Foundation.framework */; };
 		9787FF4D193CC6B400E1AE6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9787FF4C193CC6B400E1AE6D /* CoreGraphics.framework */; };
 		9787FF4F193CC6B400E1AE6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9787FF4E193CC6B400E1AE6D /* UIKit.framework */; };
@@ -46,6 +49,11 @@
 		9711C4F11940280400069B69 /* sdmFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdmFormViewController.h; sourceTree = "<group>"; };
 		9711C4F21940280400069B69 /* sdmFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sdmFormViewController.m; sourceTree = "<group>"; };
 		9711C4F31940280400069B69 /* sdmFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sdmFormViewController.xib; sourceTree = "<group>"; };
+		9739120519418C2400874D31 /* sdmSuggestionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdmSuggestionsTableViewController.h; sourceTree = "<group>"; };
+		9739120619418C2400874D31 /* sdmSuggestionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sdmSuggestionsTableViewController.m; sourceTree = "<group>"; };
+		973912081941A81A00874D31 /* sdmPassCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdmPassCodeViewController.h; sourceTree = "<group>"; };
+		973912091941A81A00874D31 /* sdmPassCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sdmPassCodeViewController.m; sourceTree = "<group>"; };
+		9739120A1941A81A00874D31 /* sdmPassCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sdmPassCodeViewController.xib; sourceTree = "<group>"; };
 		9787FF47193CC6B400E1AE6D /* ProjectSDM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectSDM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9787FF4A193CC6B400E1AE6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9787FF4C193CC6B400E1AE6D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -129,6 +137,11 @@
 			children = (
 				9711C4EB194022C000069B69 /* RegistrationViewController.h */,
 				9711C4EC194022C000069B69 /* RegistrationViewController.m */,
+				9739120519418C2400874D31 /* sdmSuggestionsTableViewController.h */,
+				9739120619418C2400874D31 /* sdmSuggestionsTableViewController.m */,
+				973912081941A81A00874D31 /* sdmPassCodeViewController.h */,
+				973912091941A81A00874D31 /* sdmPassCodeViewController.m */,
+				9739120A1941A81A00874D31 /* sdmPassCodeViewController.xib */,
 				9711C4ED194022C000069B69 /* RegistrationViewController.xib */,
 				9711C4F11940280400069B69 /* sdmFormViewController.h */,
 				9711C4F21940280400069B69 /* sdmFormViewController.m */,
@@ -248,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9739120C1941A81A00874D31 /* sdmPassCodeViewController.xib in Resources */,
 				9711C4EF194022C000069B69 /* RegistrationViewController.xib in Resources */,
 				9711C4F51940280400069B69 /* sdmFormViewController.xib in Resources */,
 				9787FF57193CC6B400E1AE6D /* InfoPlist.strings in Resources */,
@@ -271,7 +285,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9787FF59193CC6B400E1AE6D /* main.m in Sources */,
+				9739120719418C2400874D31 /* sdmSuggestionsTableViewController.m in Sources */,
 				9711C4F41940280400069B69 /* sdmFormViewController.m in Sources */,
+				9739120B1941A81A00874D31 /* sdmPassCodeViewController.m in Sources */,
 				9787FF5D193CC6B400E1AE6D /* sdmAppDelegate.m in Sources */,
 				9711C4EE194022C000069B69 /* RegistrationViewController.m in Sources */,
 				9787FF60193CC6B400E1AE6D /* ProjectSDM.xcdatamodeld in Sources */,
