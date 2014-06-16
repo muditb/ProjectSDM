@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Diagnosis" syncable="YES">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Diagnosis" isAbstract="YES" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="symptoms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Symptoms" inverseName="diagnosis" inverseEntity="Symptoms" syncable="YES"/>
     </entity>
-    <entity name="Investigations" syncable="YES">
+    <entity name="Investigations" isAbstract="YES" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Medications" syncable="YES">
+    <entity name="Medications" isAbstract="YES" syncable="YES">
         <attribute name="brandName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="composition" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Patient" syncable="YES">
+    <entity name="Patient" isAbstract="YES" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateOfBirth" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
@@ -26,12 +26,12 @@
         <attribute name="mobileNumber" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="visits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Visit" inverseName="patient" inverseEntity="Visit" syncable="YES"/>
     </entity>
-    <entity name="Symptoms" syncable="YES">
+    <entity name="Symptoms" isAbstract="YES" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="diagnosis" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Diagnosis" inverseName="symptoms" inverseEntity="Diagnosis" syncable="YES"/>
     </entity>
-    <entity name="Visit" syncable="YES">
+    <entity name="Visit" isAbstract="YES" syncable="YES">
         <attribute name="billAmount" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="patient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="visits" inverseEntity="Patient" syncable="YES"/>
@@ -39,7 +39,7 @@
     <elements>
         <element name="Diagnosis" positionX="45" positionY="-333" width="128" height="88"/>
         <element name="Investigations" positionX="396" positionY="-322" width="128" height="73"/>
-        <element name="Medications" positionX="225" positionY="-333" width="128" height="105"/>
+        <element name="Medications" positionX="225" positionY="-333" width="128" height="103"/>
         <element name="Patient" positionX="-110" positionY="-127" width="128" height="178"/>
         <element name="Symptoms" positionX="-144" positionY="-358" width="128" height="88"/>
         <element name="Visit" positionX="187" positionY="-106" width="128" height="88"/>
