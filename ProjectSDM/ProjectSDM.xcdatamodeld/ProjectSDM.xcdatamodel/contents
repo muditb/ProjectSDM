@@ -1,4 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Diagnosis" representedClassName="Diagnosis" isAbstract="YES" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="symptoms" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Symptoms" syncable="YES"/>
+    </entity>
+    <entity name="Investigations" representedClassName="Investigations" isAbstract="YES" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Medications" representedClassName="Medications" isAbstract="YES" syncable="YES">
+        <attribute name="brandName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="composition" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Patient" representedClassName="Patient" isAbstract="YES" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateOfBirth" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fatherName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobileNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="visits" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Visit" syncable="YES"/>
+    </entity>
+    <entity name="Symptoms" representedClassName="Symptoms" isAbstract="YES" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="diagnosis" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Diagnosis" syncable="YES"/>
+    </entity>
+    <entity name="Visit" representedClassName="Visit" isAbstract="YES" syncable="YES">
+        <attribute name="billAmount" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="patient" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Patient" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Patient" positionX="-9" positionY="36" width="128" height="180"/>
+        <element name="Medications" positionX="-9" positionY="36" width="128" height="105"/>
+        <element name="Diagnosis" positionX="0" positionY="45" width="128" height="90"/>
+        <element name="Investigations" positionX="18" positionY="63" width="128" height="75"/>
+        <element name="Visit" positionX="36" positionY="81" width="128" height="90"/>
+        <element name="Symptoms" positionX="54" positionY="99" width="128" height="90"/>
+    </elements>
 </model>

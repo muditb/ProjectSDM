@@ -27,13 +27,16 @@
 {
     [super viewDidLoad];
     
-    CGFloat searchBarY = 30;
-    CGFloat offset = 30;
+    //CGFloat searchBarY = 30;
+    //CGFloat offset = 30;
     
-    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y +offset, self.parentViewController.view.frame.size.width, 30)];
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, 0.4 * self.view.frame.size.width - 5, 30)];
+    
+    [self.tableView setContentInset:UIEdgeInsetsMake(40, 0, 0, 0)];
     
     [self.view addSubview:searchBar];
-    CGRectMake(self.view.frame.origin.x, searchBarY+offset, self.view.frame.size.width, self.view.frame.size.height);
+    
+    //CGRectMake(self.view.frame.origin.x, searchBarY+offset, self.view.frame.size.width, self.view.frame.size.height);
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -64,16 +67,15 @@
     return 0;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"sdm" forIndexPath:indexPath];
     
     // Configure the cell...
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

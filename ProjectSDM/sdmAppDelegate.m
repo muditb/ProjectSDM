@@ -24,7 +24,7 @@
     rvc = [[RegistrationViewController alloc] init];
     [self.window addSubview:rvc.view];
     self.window.rootViewController = rvc;
-    
+    [self saveContext];
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"authenticationRequired"];
     [[NSUserDefaults standardUserDefaults] setValue:@"1234" forKeyPath:@"PIN"];
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -137,6 +137,12 @@
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"ProjectSDM.sqlite"];
     
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    // If the expected store doesn't exist, copy the default store.
+    NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:@"ProjectSDM" ofType:@"sqlite"];
+    
+//    [fileManager copyItemAtPath:defaultStorePath toPath:[storeURL absoluteString] error:nil];
+
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {

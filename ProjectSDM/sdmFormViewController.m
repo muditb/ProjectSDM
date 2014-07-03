@@ -22,6 +22,11 @@
     }
     return self;
 }
+-(IBAction)saveAndContinue:(id)sender
+{
+    sdmPanelViewController *spvc = [[sdmPanelViewController alloc] init];
+    [self presentViewController:spvc animated:YES completion:nil];
+}
 
 - (void)viewDidLoad
 {

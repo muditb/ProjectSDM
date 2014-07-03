@@ -34,11 +34,8 @@
     [super viewDidLoad];
     sdmFormViewController *formVC = [[sdmFormViewController alloc] init];
     sdmSuggestionsTableViewController *suggestionsVC = [[sdmSuggestionsTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    
     splitVC.viewControllers = [NSArray arrayWithObjects:suggestionsVC,formVC, nil];
-    
     [self.view addSubview:splitVC.view];
-    [splitVC.view sizeToFit];
     
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(authenticate) name:UIApplicationDidBecomeActiveNotification object:nil];
     

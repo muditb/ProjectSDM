@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "sdmPanelViewController.h"
 
 @interface sdmFormViewController : UIViewController
-
+-(IBAction)saveAndContinue:(id)sender;
 @end
