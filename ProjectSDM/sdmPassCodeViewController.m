@@ -9,7 +9,9 @@
 #import "sdmPassCodeViewController.h"
 #import "UIImage+ImageEffects.h"
 
-@interface sdmPassCodeViewController ()
+@interface sdmPassCodeViewController (){
+    NSMutableArray *obj1,*obj2,*obj3;
+}
 
 @end
 
@@ -32,17 +34,44 @@
 }
 -(void)authenticate
 {
-    NSString *correctPIN = [[NSUserDefaults standardUserDefaults] stringForKey:@"PIN"];
     
-    if ([pinEntered isEqualToString:correctPIN])
+    NSString *urlstring=@"http://hospitaldemo.azurewebsites.net/index.aspx?type=pin&pin=";
+    urlstring=[urlstring stringByAppendingString:pinEntered];
+    
+    NSURL *url= [[NSURL alloc]initWithString:urlstring];
+    NSData *data= [[NSData alloc]initWithContentsOfURL:url];
+    NSError *error;
+    NSMutableDictionary *dic=[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+   
+    NSString *key=[dic objectForKey:@"pin"];
+    if([pinEntered isEqualToString:key])
     {
+        NSUserDefaults *d_id=[NSUserDefaults standardUserDefaults];
+        if(d_id)
+        {
+            [d_id setObject:[NSString stringWithString:pinEntered] forKey:@"d_id"];
+            [d_id synchronize];
+        }
         [self.delegate didAuthenticate];
     }
-    else
-    {
+    else{
         [pinEntered setString:@""];
-        pinField.text  = @"";
+        pinField.text=@"";
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Error" message:@"pin not exixts" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:@"cancel", nil];
+        [alert show];
     }
+    
+    //NSString *correctPIN = [[NSUserDefaults standardUserDefaults] stringForKey:@"PIN"];
+    
+   // if ([pinEntered isEqualToString:correctPIN])
+    //{
+    //    [self.delegate didAuthenticate];
+    //}
+    //else
+    //{
+      //  [pinEntered setString:@""];
+     //   pinField.text  = @"";
+    //}
 }
 - (void)viewDidLoad
 {

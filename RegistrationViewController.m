@@ -8,7 +8,9 @@
 
 #import "RegistrationViewController.h"
 
-@interface RegistrationViewController ()
+@interface RegistrationViewController (){
+    NSString *fname,*lname,*sex,*mobile,*dob,*did;
+}
 
 @end
 
@@ -18,12 +20,14 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        NSLog(@"hello4");
         // Custom initialization
     }
     return self;
 }
 -(void)authenticate
 {
+    NSLog(@"hello1");
     sdmPassVC = [[sdmPassCodeViewController alloc] init];
     sdmPassVC.delegate = self;
     [self presentViewController:sdmPassVC animated:YES completion:nil];
@@ -31,9 +35,13 @@
 
 - (void)viewDidLoad
 {
+    
+   NSLog(@"hello2");
     [super viewDidLoad];
     sdmFormViewController *formVC = [[sdmFormViewController alloc] init];
+    
     sdmSuggestionsTableViewController *suggestionsVC = [[sdmSuggestionsTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    
     splitVC.viewControllers = [NSArray arrayWithObjects:suggestionsVC,formVC, nil];
     [self.view addSubview:splitVC.view];
     
@@ -43,6 +51,7 @@
 }
 -(void)viewDidAppear:(BOOL)animated
 {
+    NSLog(@"hello5");
 //    BOOL authenticationRequired = [[NSUserDefaults standardUserDefaults] boolForKey:@"authenticationRequired"];
 //    if (authenticationRequired)
 //    {
@@ -51,8 +60,6 @@
 }
 -(void)didAuthenticate
 {
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"authenticationRequired"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
     
     [sdmPassVC dismissViewControllerAnimated:YES completion:nil];
 }
